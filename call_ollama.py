@@ -226,7 +226,7 @@ def translationOneMd(text, max_retries=10, is_summary=False):
 
 def translate_long_content(content, is_summary=False):
     """翻译长内容，自动分段处理"""
-    if len(content) <= 8000:
+    if len(content) <= 4000:
         log_print(f"  文件较短({len(content)}字符)，直接翻译")
         # 如果是summary.md,则需提取标签
         if is_summary:
@@ -421,7 +421,7 @@ def check_files_exist(source_folder, target_folder):
     return need_translation
 
 
-def check_large_files(source_folder, threshold=8000):
+def check_large_files(source_folder, threshold=4000):
     """检查超过指定大小的文件"""
     large_files = []
     
@@ -463,7 +463,7 @@ if __name__ == '__main__':
     '''
     is_summary = False
     # 需要翻译的文档保存地址
-    source_path = r"file/vscode.md"
+    source_path = r"file"
     # 翻译后文档保存地址
     target_path = r'trans_res'
 

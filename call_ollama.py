@@ -463,9 +463,9 @@ if __name__ == '__main__':
     '''
     is_summary = False
     # 需要翻译的文档保存地址
-    source_path = r"D:\Mark_trans\PX4-user_guide-main\add"
+    source_path = r"file/vscode.md"
     # 翻译后文档保存地址
-    target_path = r'D:\Mark_trans\add_res'
+    target_path = r'trans_res'
 
     log_print(f"开始处理:")
     log_print(f"源路径: {source_path}")
